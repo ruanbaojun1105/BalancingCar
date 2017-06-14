@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name = "LedTextView">
+        <attr name="textColor" format="color" />
+        <attr name="spacing" format="dimension" />
+        <attr name="scroll" format="boolean" />
+        <attr name="speed" >
+            <enum name="normal" value="0"></enum>
+            <enum name="slow" value="1"></enum>
+        </attr>
+        <attr name="scrollDirection" >
+            <enum name="left" value="0"></enum>
+            <enum name="right" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="StateButton">
+
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference"/>
+        <attr name="pressedTextColor" format="color|reference"/>
+        <attr name="unableTextColor" format="color|reference"/>
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference"/>
+        <attr name="strokeDashGap" format="dimension|reference"/>
+        <attr name="normalStrokeWidth" format="dimension|reference"/>
+        <attr name="pressedStrokeWidth" format="dimension|reference"/>
+        <attr name="unableStrokeWidth" format="dimension|reference"/>
+        <attr name="normalStrokeColor" format="color|reference"/>
+        <attr name="pressedStrokeColor" format="color|reference"/>
+        <attr name="unableStrokeColor" format="color|reference"/>
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference"/>
+        <attr name="pressedBackgroundColor" format="color|reference"/>
+        <attr name="unableBackgroundColor" format="color|reference"/>
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference"/>
+        <attr name="round" format="boolean|reference"/>
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference"/>
+
+    </declare-styleable>
+    <declare-styleable name="SteeringWheelView">
+        <attr name="ballColor" format="color" />
+        <attr name="arrowRight" format="color|reference" />
+        <attr name="ballSrc" format="color|reference" />
+        <attr name="ballPressedSrc" format="color|reference" />
+    </declare-styleable>
+</resources>

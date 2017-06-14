@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/BaseToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:title="home"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:titleTextAppearance="@style/ToolbarTextAppearance" >
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/seting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{fa-cog spin}"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/green_ael"
+            android:padding="10dp"
+            android:minWidth="30dp"
+            />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/connect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{fa-bluetooth spin}"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/green_ael"
+            android:padding="10dp"
+            android:minWidth="55dp"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabSelectedTextColor="@color/green_ael"
+            app:tabTextColor="@color/white"
+            app:tabMode="scrollable"
+            app:tabGravity="center"
+            />
+        </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:piv_animationType="drop"
+        attrs:piv_padding="8dp"
+        attrs:piv_radius="5dp"
+        app:piv_selectedColor="@color/green_ael"
+        app:piv_unselectedColor="@color/bg_gray"
+        android:layout_marginBottom="6dp"
+        />
+
+</RelativeLayout>
