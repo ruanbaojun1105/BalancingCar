@@ -9,7 +9,8 @@ import android.view.animation.AnticipateInterpolator;
 import android.widget.TextView;
 
 import com.hwx.balancingcar.balancingcar.R;
-import com.hwx.balancingcar.balancingcar.activity.SimpleFragment;
+import com.hwx.balancingcar.balancingcar.simple.BluetoothService;
+import com.hwx.balancingcar.balancingcar.simple.SimpleFragment;
 import com.hwx.balancingcar.balancingcar.view.DialChart02View;
 import com.hwx.balancingcar.balancingcar.view.SteeringWheelView;
 
@@ -85,6 +86,7 @@ public class PaFragment extends SimpleFragment implements SteeringWheelView.Stee
     public void onStatusChanged(SteeringWheelView view, int angle, int power, int direction) {
         String text = constructText(angle, power, direction);
         tv.setText(text);
+        BluetoothService.getInstance().sendData((byte) 0x03,new byte[]{(byte)direction},true);
     }
 
     private String constructText(int angle, int power, int direction) {

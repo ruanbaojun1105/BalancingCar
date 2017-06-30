@@ -30,7 +30,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,25 +38,17 @@
             />
         <activity
             android:name=".activity.SettingsActivity"
+            android:configChanges="orientation|keyboard|screenSize"
             android:label="@string/title_activity_settings"
             ></activity>
         <activity android:name=".activity.ContrlActivity"
             android:configChanges="orientation|keyboard|screenSize">
         </activity>
-
-
-        <!--蓝牙操作-->
-        <activity android:name=".tool.CodeDemoActivity" />
-        <activity android:name=".tool.BleMainActivity"/>
-        <activity android:name=".tool.scan.AnyScanActivity" />
-        <activity android:name=".tool.scan.NameScanActivity" />
-        <activity android:name=".tool.scan.NameFuzzyScanActivity" />
-        <activity android:name=".tool.scan.NamesScanActivity" />
-        <activity android:name=".tool.scan.NamesFuzzyScanActivity" />
-        <activity android:name=".tool.scan.MacScanActivity" />
-        <activity android:name=".tool.operation.OperationActivity" />
-
-        <service android:name=".tool.BluetoothService" />
+        <activity android:name=".activity.BlueToothTTActivity"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
 
     </application>
 

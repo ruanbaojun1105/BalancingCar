@@ -1,15 +1,11 @@
 package com.hwx.balancingcar.balancingcar.activity;
 
 import android.content.res.Configuration;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.hwx.balancingcar.balancingcar.R;
 import com.hwx.balancingcar.balancingcar.fragment.PaFragment;
-import com.joanzapata.iconify.Iconify;
-import com.joanzapata.iconify.fonts.FontAwesomeModule;
+import com.hwx.balancingcar.balancingcar.simple.SimpleActivity;
 
 public class ContrlActivity extends SimpleActivity {
     private static final String TAG = "ContrlActivity";

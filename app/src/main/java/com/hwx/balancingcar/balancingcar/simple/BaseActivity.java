@@ -1,4 +1,4 @@
-package com.hwx.balancingcar.balancingcar.activity;
+package com.hwx.balancingcar.balancingcar.simple;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;

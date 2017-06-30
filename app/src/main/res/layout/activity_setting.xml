@@ -26,8 +26,7 @@
             <ImageView
                 android:id="@+id/image_set"
                 android:layout_width="match_parent"
-                android:layout_height="255dp"
-                android:src="@drawable/pingheng"
+                android:layout_height="256dp"
                 android:scaleType="fitCenter"
                 />
             <LinearLayout

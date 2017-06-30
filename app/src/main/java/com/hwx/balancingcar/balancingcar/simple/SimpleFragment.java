@@ -1,4 +1,4 @@
-package com.hwx.balancingcar.balancingcar.activity;
+package com.hwx.balancingcar.balancingcar.simple;
 
 import android.app.Activity;
 import android.content.Context;

@@ -9,7 +9,8 @@ import android.widget.TextView;
 
 import com.hwx.balancingcar.balancingcar.R;
 import com.hwx.balancingcar.balancingcar.activity.ContrlActivity;
-import com.hwx.balancingcar.balancingcar.activity.SimpleFragment;
+import com.hwx.balancingcar.balancingcar.simple.SimpleFragment;
+import com.hwx.balancingcar.balancingcar.simple.BluetoothService;
 import com.hwx.balancingcar.balancingcar.util.LogUtils;
 import com.hwx.balancingcar.balancingcar.view.DialChart03View;
 import com.hwx.balancingcar.balancingcar.view.StateButton;
@@ -49,6 +50,8 @@ public class MainFragment extends SimpleFragment {
     StateButton starStopLight;
     @BindView(R.id.star_stop_device)
     StateButton starStopDevice;
+    @BindView(R.id.star_stop_control)
+    StateButton starStopControl;
 
     public MainFragment() {
         // Required empty public constructor
@@ -84,10 +87,11 @@ public class MainFragment extends SimpleFragment {
     protected void initEventAndData() {
     }
 
-    @OnClick({R.id.star_stop_light, R.id.star_stop_device})
+    @OnClick({R.id.star_stop_light, R.id.star_stop_device,R.id.star_stop_control})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.star_stop_light:
+                BluetoothService.getInstance().sendData((byte) 0x02,new byte[]{0x01},true);
                 int max = 100;
                 int min = 1;
                 Random random = new Random();
@@ -98,8 +102,12 @@ public class MainFragment extends SimpleFragment {
                 circleView.invalidate();
                 break;
             case R.id.star_stop_device:
+                BluetoothService.getInstance().sendData((byte) 0x01,new byte[]{0x01},true);
+                break;
+            case R.id.star_stop_control:
                 startActivity(new Intent(getContext(), ContrlActivity.class));
                 break;
         }
     }
+
 }

@@ -29,11 +29,11 @@ public class SteeringWheelView extends View {
     /**
      * 当前方向无效，方向盘没有触摸时处于该状态
      */
-    public static final int INVALID = -1;
+    public static final int INVALID = 0;
     /**
      * 向右
      */
-    public static final int RIGHT = 0;
+    public static final int RIGHT = 3;
     /**
      * 向上
      */
